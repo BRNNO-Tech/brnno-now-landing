@@ -61,19 +61,19 @@ const ProSection = ({ className = '' }: ProSectionProps) => {
   }, []);
 
   return (
-    <section 
-      ref={sectionRef} 
+    <section
+      ref={sectionRef}
       id="pro"
       className={`section-pinned bg-dark ${className}`}
     >
       <div ref={contentRef} className="absolute inset-0">
         {/* Right Hero Image - safe margins */}
-        <div 
+        <div
           className="image-animate absolute right-[5vw] top-1/2 -translate-y-1/2 w-[42vw] md:w-[40vw] h-[60vh] md:h-[70vh]"
           style={{ opacity: 0 }}
         >
-          <img 
-            src="/images/pro_portrait.jpg" 
+          <img
+            src="/images/pro_portrait.jpg"
             alt="Professional detailer"
             className="editorial-image w-full h-full"
             loading="lazy"
@@ -84,28 +84,28 @@ const ProSection = ({ className = '' }: ProSectionProps) => {
         <div className="absolute left-[48vw] top-[15vh] h-[70vh] hairline origin-top hidden md:block" />
 
         {/* Left Text Block - safe positioning */}
-        <div 
+        <div
           className="text-animate absolute left-[5vw] md:left-[8vw] top-[15vh] md:w-[38vw] max-w-[500px]"
           style={{ opacity: 0 }}
         >
           <p className="label-mono text-text-secondary mb-4">BRNNO PRO</p>
-          
+
           <h2 className="headline-lg text-white mb-6 md:mb-8">
-            BECOME A<br />PRO
+            JOIN THE<br /> NETWORK
           </h2>
-          
+
           <p className="text-text-secondary text-base md:text-lg leading-relaxed mb-6 md:mb-8">
             Get booked by local customers, manage your schedule, and get paid fast—right from your phone.
           </p>
-          
-          <button className="btn-accent flex items-center gap-2">
+
+          <a href="https://app.brnno.com/detailer-signup" target="_blank" rel="noopener noreferrer" className="btn-accent flex items-center gap-2 inline-flex">
             Apply to join
             <ArrowRight size={18} />
-          </button>
+          </a>
         </div>
 
         {/* Bottom Micro UI - safe bottom margin */}
-        <div 
+        <div
           className="micro-animate absolute left-[5vw] md:left-[8vw] bottom-[5vh] flex items-center gap-3"
           style={{ opacity: 0 }}
         >

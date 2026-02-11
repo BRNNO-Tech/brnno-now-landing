@@ -1,7 +1,8 @@
 import { useRef, useLayoutEffect } from 'react';
+import { Link } from 'react-router-dom';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { ArrowRight, Sparkles, Car, Sofa, MapPin, Instagram, Twitter, Facebook } from 'lucide-react';
+import { Sparkles, Car, Sofa, MapPin, Instagram, Twitter, Facebook } from 'lucide-react';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -76,8 +77,8 @@ const ClosingSection = ({ className = '' }: ClosingSectionProps) => {
   const cities = ['Atlanta', 'Austin', 'Chicago', 'Dallas', 'Houston', 'Los Angeles', 'Miami', 'New York', 'Phoenix', 'San Francisco', 'Seattle', '+100 more'];
 
   return (
-    <section 
-      ref={sectionRef} 
+    <section
+      ref={sectionRef}
       id="support"
       className={`relative bg-dark min-h-screen ${className}`}
     >
@@ -85,8 +86,8 @@ const ClosingSection = ({ className = '' }: ClosingSectionProps) => {
       <div className="relative h-screen flex items-center justify-center overflow-hidden">
         {/* Background Image */}
         <div className="absolute inset-0">
-          <img 
-            src="/images/hero_detailing.jpg" 
+          <img
+            src="/images/hero_detailing.jpg"
             alt="Detailing background"
             className="w-full h-full object-cover opacity-25"
             loading="lazy"
@@ -103,32 +104,29 @@ const ClosingSection = ({ className = '' }: ClosingSectionProps) => {
             Join thousands of car owners who trust Brnno for their detailing needs.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <button className="btn-accent text-base px-8 py-4">
+            <a href="https://app.brnno.com" target="_blank" rel="noopener noreferrer" className="btn-accent text-base px-8 py-4 inline-flex items-center justify-center">
               Book Now
-            </button>
-            <button className="px-8 py-4 rounded-full border border-white/20 text-white hover:bg-white/5 transition-colors">
-              View pricing
-            </button>
+            </a>
           </div>
         </div>
       </div>
 
       {/* Service Cards */}
-      <div 
+      <div
         ref={servicesRef}
         className="py-24 px-6 lg:px-10"
       >
         <div className="max-w-6xl mx-auto">
           <p className="label-mono text-text-secondary mb-4 text-center">OUR SERVICES</p>
           <h3 className="font-display font-bold text-3xl md:text-4xl text-white text-center mb-16">
-            Choose your package
+            Choose From popular packages
           </h3>
-          
+
           <div className="grid md:grid-cols-3 gap-6">
             {services.map((service) => (
-              <div 
+              <div
                 key={service.title}
-                className="glass-card p-8 hover:bg-white/[0.08] transition-colors cursor-pointer group"
+                className="glass-card p-8 border border-white/5 hover:border-yellow/30 hover:bg-white/[0.08] transition-colors group"
               >
                 <div className="w-14 h-14 rounded-2xl bg-yellow/10 flex items-center justify-center mb-6 group-hover:bg-yellow/20 transition-colors">
                   <service.icon size={28} className="text-yellow" />
@@ -137,7 +135,6 @@ const ClosingSection = ({ className = '' }: ClosingSectionProps) => {
                 <p className="text-text-secondary text-sm mb-6">{service.description}</p>
                 <div className="flex items-center justify-between">
                   <span className="text-yellow font-medium">{service.price}</span>
-                  <ArrowRight size={18} className="text-text-secondary group-hover:text-yellow group-hover:translate-x-1 transition-all" />
                 </div>
               </div>
             ))}
@@ -146,7 +143,7 @@ const ClosingSection = ({ className = '' }: ClosingSectionProps) => {
       </div>
 
       {/* How It Works */}
-      <div 
+      <div
         ref={stepsRef}
         className="py-24 px-6 lg:px-10 bg-white/[0.02]"
       >
@@ -155,7 +152,7 @@ const ClosingSection = ({ className = '' }: ClosingSectionProps) => {
           <h3 className="font-display font-bold text-3xl md:text-4xl text-white text-center mb-16">
             Simple as 1-2-3
           </h3>
-          
+
           <div className="grid md:grid-cols-3 gap-8">
             {steps.map((step) => (
               <div key={step.number} className="text-center">
@@ -171,7 +168,7 @@ const ClosingSection = ({ className = '' }: ClosingSectionProps) => {
       </div>
 
       {/* Markets */}
-      <div 
+      <div
         ref={marketsRef}
         className="py-24 px-6 lg:px-10"
       >
@@ -183,10 +180,10 @@ const ClosingSection = ({ className = '' }: ClosingSectionProps) => {
           <h3 className="font-display font-bold text-3xl md:text-4xl text-white mb-12">
             120+ cities and counting
           </h3>
-          
+
           <div className="flex flex-wrap justify-center gap-3 md:gap-4">
             {cities.map((city) => (
-              <span 
+              <span
                 key={city}
                 className="px-4 py-2 rounded-full bg-white/5 text-text-secondary text-sm hover:bg-white/10 hover:text-white transition-colors cursor-default"
               >
@@ -207,7 +204,7 @@ const ClosingSection = ({ className = '' }: ClosingSectionProps) => {
                 BRNNO
               </a>
               <p className="text-text-secondary text-sm">
-                Detailing, delivered. Professional car care at your doorstep.
+                On-Demand detailing service delivered. By care care professionals at your doorstep.
               </p>
             </div>
 
@@ -225,17 +222,15 @@ const ClosingSection = ({ className = '' }: ClosingSectionProps) => {
             <div>
               <h5 className="font-medium text-white mb-4">Company</h5>
               <ul className="space-y-2">
-                <li><a href="#" className="text-text-secondary text-sm hover:text-white transition-colors">About Us</a></li>
-                <li><a href="#" className="text-text-secondary text-sm hover:text-white transition-colors">Careers</a></li>
-                <li><a href="#" className="text-text-secondary text-sm hover:text-white transition-colors">Press</a></li>
-                <li><a href="#" className="text-text-secondary text-sm hover:text-white transition-colors">Contact</a></li>
+                <li><Link to="/about" className="text-text-secondary text-sm hover:text-white transition-colors">About Us</Link></li>
+                <li><Link to="/contact" className="text-text-secondary text-sm hover:text-white transition-colors">Contact</Link></li>
               </ul>
             </div>
 
             <div>
               <h5 className="font-medium text-white mb-4">Support</h5>
               <ul className="space-y-2">
-                <li><a href="#" className="text-text-secondary text-sm hover:text-white transition-colors">Help Center</a></li>
+                <li><Link to="/support" className="text-text-secondary text-sm hover:text-white transition-colors">Help Center</Link></li>
                 <li><a href="#" className="text-text-secondary text-sm hover:text-white transition-colors">Safety</a></li>
                 <li><a href="#" className="text-text-secondary text-sm hover:text-white transition-colors">Terms of Service</a></li>
                 <li><a href="#" className="text-text-secondary text-sm hover:text-white transition-colors">Privacy Policy</a></li>

@@ -20,7 +20,7 @@ const HeroSection = ({ className = '' }: HeroSectionProps) => {
 
     const ctx = gsap.context(() => {
       const elements = content.querySelectorAll('.hero-element');
-      
+
       gsap.set(elements, { opacity: 1, y: 0 });
 
       const scrollTl = gsap.timeline({
@@ -36,7 +36,7 @@ const HeroSection = ({ className = '' }: HeroSectionProps) => {
         }
       });
 
-      scrollTl.fromTo(elements, 
+      scrollTl.fromTo(elements,
         { y: 0, opacity: 1 },
         { y: -60, opacity: 0, stagger: 0.03, ease: 'power2.in' },
         0.7
@@ -48,15 +48,15 @@ const HeroSection = ({ className = '' }: HeroSectionProps) => {
   }, []);
 
   return (
-    <section 
-      ref={sectionRef} 
+    <section
+      ref={sectionRef}
       className={`section-pinned bg-dark ${className}`}
     >
       <div ref={contentRef} className="absolute inset-0 flex items-center justify-center">
         {/* Hero Image - centered with safe margins */}
         <div className="hero-element absolute w-[80vw] md:w-[65vw] lg:w-[58vw] max-h-[65vh] aspect-[16/10]" style={{ top: '10%' }}>
-          <img 
-            src="/images/hero_detailing.jpg" 
+          <img
+            src="/images/hero_detailing.jpg"
             alt="Professional car detailing"
             className="w-full h-full object-cover rounded-[24px]"
             style={{ boxShadow: '0 20px 60px rgba(0, 0, 0, 0.45)' }}
@@ -66,13 +66,13 @@ const HeroSection = ({ className = '' }: HeroSectionProps) => {
         </div>
 
         {/* Headline */}
-        <h1 className="hero-element absolute top-[38%] left-1/2 -translate-x-1/2 text-center headline-xl text-white z-10 whitespace-nowrap px-4">
-          DETAILING, DELIVERED
+        <h1 className="hero-element absolute top-[38%] left-1/2 -translate-x-1/2 text-center text-4xl md:text-5xl lg:text-6xl font-semibold text-white z-10 whitespace-nowrap px-4 leading-tight">
+          Drive Something You're Proud Of.
         </h1>
 
         {/* Subheadline */}
         <p className="hero-element absolute top-[48%] left-1/2 -translate-x-1/2 text-center text-text-secondary text-base md:text-lg max-w-md z-10 px-4">
-          Book a vetted detailer to your driveway in minutes.
+          On-demand mobile detailing, delivered to your door. Book in minutes.
         </p>
 
         {/* Bottom-left UI Card - with safe margins */}
@@ -98,13 +98,13 @@ const HeroSection = ({ className = '' }: HeroSectionProps) => {
           </div>
 
           <div className="flex items-center gap-3">
-            <button className="btn-accent text-sm flex-1">
+            <a href="https://app.brnno.com" target="_blank" rel="noopener noreferrer" className="btn-accent text-sm flex-1 inline-flex items-center justify-center">
               Book Now
-            </button>
-            <button className="text-sm text-text-secondary hover:text-text-primary transition-colors flex items-center gap-1">
-              Become a Pro
+            </a>
+            <a href="https://app.brnno.com/detailer-signup" target="_blank" rel="noopener noreferrer" className="text-sm text-text-secondary hover:text-text-primary transition-colors flex items-center gap-1">
+              Apply Now
               <ArrowRight size={14} />
-            </button>
+            </a>
           </div>
         </div>
 

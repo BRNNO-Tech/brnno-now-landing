@@ -75,14 +75,14 @@ const OnDemandSection = ({ className = '' }: OnDemandSectionProps) => {
   }, []);
 
   return (
-    <section 
-      ref={sectionRef} 
+    <section
+      ref={sectionRef}
       className={`section-pinned ${className}`}
       style={{ backgroundColor: '#0B0B0D' }}
     >
       <div ref={contentRef} className="absolute inset-0">
         {/* Lavender Background */}
-        <div 
+        <div
           className="bg-animate absolute inset-0"
           style={{ backgroundColor: '#6B62B8', opacity: 0 }}
         />
@@ -93,12 +93,12 @@ const OnDemandSection = ({ className = '' }: OnDemandSectionProps) => {
         </div>
 
         {/* Center Hero Image - safe sizing */}
-        <div 
+        <div
           className="image-animate absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[80vw] md:w-[65vw] h-[50vh] md:h-[65vh]"
           style={{ opacity: 0 }}
         >
-          <img 
-            src="/images/ondemand_wash.jpg" 
+          <img
+            src="/images/ondemand_wash.jpg"
             alt="Hands washing car"
             className="editorial-image w-full h-full"
             loading="lazy"
@@ -107,7 +107,7 @@ const OnDemandSection = ({ className = '' }: OnDemandSectionProps) => {
         </div>
 
         {/* Center Headline */}
-        <h2 
+        <h2
           className="headline-animate absolute left-1/2 top-[45%] -translate-x-1/2 -translate-y-1/2 headline-xl text-white text-center whitespace-nowrap z-10 px-4"
           style={{ opacity: 0 }}
         >
@@ -115,7 +115,7 @@ const OnDemandSection = ({ className = '' }: OnDemandSectionProps) => {
         </h2>
 
         {/* Bottom-right UI Card - safe positioning */}
-        <div 
+        <div
           className="card-animate absolute right-[5vw] bottom-[5vh] w-[90vw] max-w-[380px] glass-card p-5 md:p-6 z-10"
           style={{ opacity: 0, background: 'rgba(30, 30, 35, 0.9)' }}
         >
@@ -128,10 +128,10 @@ const OnDemandSection = ({ className = '' }: OnDemandSectionProps) => {
           <p className="text-text-secondary text-sm mb-4">
             Morning, afternoon, or evening—pick a time that works.
           </p>
-          <button className="flex items-center gap-2 text-yellow text-sm font-medium hover:gap-3 transition-all">
-            See availability
+          <a href="https://app.brnno.com" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-yellow text-sm font-medium hover:gap-3 transition-all">
+            Book or Schedule
             <ArrowRight size={16} />
-          </button>
+          </a>
         </div>
       </div>
     </section>

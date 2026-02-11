@@ -61,19 +61,19 @@ const BookJobSection = ({ className = '' }: BookJobSectionProps) => {
   }, []);
 
   return (
-    <section 
-      ref={sectionRef} 
+    <section
+      ref={sectionRef}
       id="book"
       className={`section-pinned bg-dark ${className}`}
     >
       <div ref={contentRef} className="absolute inset-0">
         {/* Left Hero Image - safe margins */}
-        <div 
+        <div
           className="image-animate absolute left-[5vw] top-1/2 -translate-y-1/2 w-[42vw] md:w-[40vw] h-[60vh] md:h-[70vh]"
           style={{ opacity: 0 }}
         >
-          <img 
-            src="/images/book_car.jpg" 
+          <img
+            src="/images/book_car.jpg"
             alt="Luxury car detailing"
             className="editorial-image w-full h-full"
             loading="lazy"
@@ -84,20 +84,20 @@ const BookJobSection = ({ className = '' }: BookJobSectionProps) => {
         <div className="absolute left-[52vw] top-[15vh] h-[70vh] hairline origin-top hidden md:block" />
 
         {/* Right Text Block - safe positioning */}
-        <div 
+        <div
           className="text-animate absolute right-[5vw] md:left-[56vw] left-[5vw] top-[15vh] md:w-[38vw] max-w-[500px]"
           style={{ opacity: 0 }}
         >
           <p className="label-mono text-text-secondary mb-4">BRNNO NOW</p>
-          
+
           <h2 className="headline-lg text-white mb-6 md:mb-8">
             BOOK A<br />JOB
           </h2>
-          
+
           <p className="text-text-secondary text-base md:text-lg leading-relaxed mb-6 md:mb-8">
             Choose your service, set your location, and confirm. We'll match you with a nearby pro—often within the hour.
           </p>
-          
+
           <button className="btn-accent flex items-center gap-2">
             Book a detail
             <ArrowRight size={18} />
@@ -105,7 +105,7 @@ const BookJobSection = ({ className = '' }: BookJobSectionProps) => {
         </div>
 
         {/* Bottom Micro UI - safe bottom margin */}
-        <div 
+        <div
           className="micro-animate absolute left-[5vw] md:left-[56vw] bottom-[5vh] flex items-center gap-3"
           style={{ opacity: 0 }}
         >
@@ -114,7 +114,7 @@ const BookJobSection = ({ className = '' }: BookJobSectionProps) => {
             <span className="w-2 h-2 rounded-full bg-yellow dot-pulse" style={{ animationDelay: '0.3s' }} />
             <span className="w-2 h-2 rounded-full bg-yellow dot-pulse" style={{ animationDelay: '0.6s' }} />
           </div>
-          <span className="text-sm text-text-secondary">Pay after the job. No hidden fees.</span>
+          <span className="text-sm text-text-secondary">Payments made easy. No hidden fees.</span>
         </div>
       </div>
     </section>

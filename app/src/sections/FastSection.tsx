@@ -61,18 +61,18 @@ const FastSection = ({ className = '' }: FastSectionProps) => {
   }, []);
 
   return (
-    <section 
-      ref={sectionRef} 
+    <section
+      ref={sectionRef}
       className={`section-pinned bg-dark ${className}`}
     >
       <div ref={contentRef} className="absolute inset-0">
         {/* Right Hero Image - safe margins */}
-        <div 
+        <div
           className="image-animate absolute right-[5vw] top-1/2 -translate-y-1/2 w-[42vw] md:w-[40vw] h-[60vh] md:h-[70vh]"
           style={{ opacity: 0 }}
         >
-          <img 
-            src="/images/fast_wheel.jpg" 
+          <img
+            src="/images/fast_wheel.jpg"
             alt="Clean alloy wheel"
             className="editorial-image w-full h-full"
             loading="lazy"
@@ -83,28 +83,28 @@ const FastSection = ({ className = '' }: FastSectionProps) => {
         <div className="absolute left-[48vw] top-[15vh] h-[70vh] hairline origin-top hidden md:block" />
 
         {/* Left Text Block - safe positioning */}
-        <div 
+        <div
           className="text-animate absolute left-[5vw] md:left-[8vw] top-[15vh] md:w-[38vw] max-w-[500px]"
           style={{ opacity: 0 }}
         >
           <p className="label-mono text-text-secondary mb-4">BRNNO NOW</p>
-          
+
           <h2 className="headline-lg text-white mb-6 md:mb-8">
             FAST
           </h2>
-          
+
           <p className="text-text-secondary text-base md:text-lg leading-relaxed mb-6 md:mb-8">
-            Most jobs start within 60 minutes. Track arrival, chat with your pro, and get updates in real time.
+            Most jobs booked within 60 minutes. Track arrival, message your detailer, and get updates in real time.
           </p>
-          
-          <button className="btn-accent flex items-center gap-2">
-            Track your pro
+
+          <a href="https://app.brnno.com" target="_blank" rel="noopener noreferrer" className="btn-accent flex items-center gap-2 inline-flex">
+            Live tracking
             <ArrowRight size={18} />
-          </button>
+          </a>
         </div>
 
         {/* Bottom Micro UI - safe bottom margin */}
-        <div 
+        <div
           className="micro-animate absolute left-[5vw] md:left-[8vw] bottom-[5vh] flex items-center gap-3"
           style={{ opacity: 0 }}
         >
