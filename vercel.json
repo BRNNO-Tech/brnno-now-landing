@@ -1,9 +1,8 @@
 {
     "buildCommand": "cd app && npm run build",
     "installCommand": "cd app && npm install",
-    "outputDirectory": "dist",
+    "outputDirectory": "app/dist",
     "framework": "vite",
-    "rootDirectory": "app",
     "env": {
         "VITE_APP_MODE": "production"
     },
