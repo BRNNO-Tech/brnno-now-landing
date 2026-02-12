@@ -27,7 +27,7 @@ const BookJobSection = ({ className = '' }: BookJobSectionProps) => {
         scrollTrigger: {
           trigger: section,
           start: 'top top',
-          end: '+=120%',
+          end: '+=80%',
           pin: true,
           scrub: 0.5,
         }

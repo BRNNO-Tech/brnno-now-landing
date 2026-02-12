@@ -27,7 +27,7 @@ const HeroSection = ({ className = '' }: HeroSectionProps) => {
         scrollTrigger: {
           trigger: section,
           start: 'top top',
-          end: '+=130%',
+          end: '+=80%',
           pin: true,
           scrub: 0.5,
           onLeaveBack: () => {

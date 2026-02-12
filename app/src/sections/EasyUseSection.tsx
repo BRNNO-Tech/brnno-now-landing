@@ -27,7 +27,7 @@ const EasyUseSection = ({ className = '' }: EasyUseSectionProps) => {
         scrollTrigger: {
           trigger: section,
           start: 'top top',
-          end: '+=120%',
+          end: '+=80%',
           pin: true,
           scrub: 0.5,
         }
